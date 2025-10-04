@@ -17,15 +17,3 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-if ('Notification' in window) {
-  Notification.requestPermission().then(permission => {
-    if (permission === 'granted') {
-      new Notification('Welcome to Portal: Aperture Redux!', {
-        body: 'Thanks for visiting the website, stay tuned for mod updates!',
-        icon: 'icon.png'
-      });
-    }
-  });
-} else {
-  console.log('This browser does not support desktop notifications.');
-}
